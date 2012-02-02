@@ -1,0 +1,33 @@
+"Load pathogen
+call pathogen#infect()
+syntax on
+
+"Loads the different filetype
+filetype plugin indent on
+
+"Auto launch NERDTree
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
+"NERDTree Toggle Bind
+map <silent> <C-D> :NERDTreeToggle<CR>
+
+"skowyong's settings
+set ru
+set nu
+colorscheme herald
+set gfn=Consolas
+set history=50
+set cursorline cursorcolumn!
+set fileencodings=utf-8
+
+"Indentation
+set incsearch
+set autoindent
+set smartindent
+
+"For copying code outside
+set pastetoggle=<F3>
+
+"SuperTab Settings
+let g:SuperTabDefaultCompletionType = "context"
