@@ -24,6 +24,15 @@ set history=50
 set cursorline cursorcolumn!
 set fileencodings=utf-8
 
+" Set tildeop
+:set tildeop
+
+"Disabling arrow keys to encourage moving in normal mode
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+
 " Indentation
 set incsearch
 set autoindent
