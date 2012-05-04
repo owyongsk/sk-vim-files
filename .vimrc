@@ -8,6 +8,10 @@ let g:pathogen_disabled = ['pathogen']
 " Loads the different filetype
 filetype plugin indent on
 
+" Ruby
+set sw=2 " no of spaces for indenting
+set ts=2 " show \t as 2 spaces and treat 2 spaces as \t when deleting, etc..
+
 " Auto launch NERDTree
 autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
@@ -35,7 +39,7 @@ noremap <Right> <nop>
 
 " Indentation
 set incsearch
-set autoindent
+" set autoindent
 set smartindent
 
 " For copying code outside
