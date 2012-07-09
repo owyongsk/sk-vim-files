@@ -38,6 +38,13 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=80
 
+" Rainbow Parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+au Syntax * RainbowParenthesesLoadChevrons
+
 " Bind tag to jump to the beginning or end of tag
 nnoremap <tab> %
 vnoremap <tab> %
