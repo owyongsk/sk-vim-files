@@ -17,7 +17,7 @@ autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
 " NERDTree Toggle Bind
-map <silent> <C-D> :NERDTreeToggle<CR>
+map <silent> <C-d> :NERDTreeToggle<CR>
 
 " skowyong's settings
 set ru
@@ -27,23 +27,44 @@ set gfn=Consolas
 set history=50
 set cursorline cursorcolumn!
 set fileencodings=utf-8
+set relativenumber
+set ignorecase
+set smartcase
 
-" Set tildeop
-:set tildeop
+" Bind tab to jump to end of tag
+nnoremap <tab> %
+vnoremap <tab> %
 
-"Disabling arrow keys to encourage moving in normal mode
+"set tildeop
+
+" Disabling arrow keys to encourage moving in normal mode
 noremap <Up> <nop>
-noremap <Down> <nop>
+noremap <Down><nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+" Some sort of search stuff
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><space> :set invhlsearch<cr>
+
+" Steve Losh's crazy stuff
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=80
 
 " Indentation
-set incsearch
-" set autoindent
+set autoindent
 set smartindent
 
 " For copying code outside
-set pastetoggle=<F3>
+set pastetoggle=<C-o>
 
 " SuperTab Settings
 let g:SuperTabDefaultCompletionType = "context"
