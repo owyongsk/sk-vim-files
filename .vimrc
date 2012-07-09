@@ -30,28 +30,7 @@ set fileencodings=utf-8
 set relativenumber
 set ignorecase
 set smartcase
-
-" Bind tab to jump to end of tag
-nnoremap <tab> %
-vnoremap <tab> %
-
-"set tildeop
-
-" Disabling arrow keys to encourage moving in normal mode
-noremap <Up> <nop>
-noremap <Down><nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-
-" Some sort of search stuff
-set incsearch
-set showmatch
-set hlsearch
-nnoremap <leader><space> :set invhlsearch<cr>
+set tildeop
 
 " Steve Losh's crazy stuff
 set wrap
@@ -59,7 +38,27 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=80
 
-" Indentation
+" Bind tag to jump to the beginning or end of tag
+nnoremap <tab> %
+vnoremap <tab> %
+
+" Disabling arrow keys to encourage moving in normal mode
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+
+" Some sort of search stuff
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><space> :set invhlsearch<cr>
+
+" Some sort of indentation
 set autoindent
 set smartindent
 
