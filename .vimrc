@@ -43,7 +43,7 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-au Syntax * RainbowParenthesesLoadChevrons
+"au Syntax * RainbowParenthesesLoadChevrons
 
 " Bind tag to jump to the beginning or end of tag
 nnoremap <tab> %
@@ -64,6 +64,11 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :set invhlsearch<cr>
+
+" Closetag settings
+autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
+"let b:closetag_html_style=1
 
 " Some sort of indentation
 set autoindent
