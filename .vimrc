@@ -27,7 +27,7 @@ set gfn=Consolas
 set history=50
 set cursorline cursorcolumn!
 set fileencodings=utf-8
-set relativenumber
+autocmd BufEnter * set relativenumber
 set ignorecase
 set smartcase
 set tildeop
