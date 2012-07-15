@@ -17,7 +17,7 @@ autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 
 " NERDTree Toggle Bind
-map <silent> <C-d> :NERDTreeToggle<CR>
+map <silent> <C-d> :NERDTreeToggle<CR>:set rnu<CR>
 
 " skowyong's settings
 set ru
