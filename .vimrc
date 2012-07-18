@@ -49,6 +49,9 @@ au Syntax * RainbowParenthesesLoadBraces
 nnoremap <tab> %
 vnoremap <tab> %
 
+" Bind to open the file
+map <leader>, :!open %<cr>
+
 " Disabling arrow keys to encourage moving in normal mode
 noremap <Up> <nop>
 noremap <Down> <nop>
@@ -68,7 +71,6 @@ nnoremap <leader><space> :set invhlsearch<cr>
 " Closetag settings
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim
-"let b:closetag_html_style=1
 
 " Some sort of indentation
 set autoindent
