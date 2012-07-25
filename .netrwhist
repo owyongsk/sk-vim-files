@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/skowyong/.vim/bundle'
 let g:netrw_dirhist_2='/home/skowyong/.vim/bundle/snipmate-snippets/snippets'
 let g:netrw_dirhist_3='/Users/skowyong/.vim/.git'
 let g:netrw_dirhist_4='/Users/skowyong/.vim'
+let g:netrw_dirhist_5='/Volumes/bt'
+let g:netrw_dirhist_6='/Users/skowyong/.heroku'
+let g:netrw_dirhist_7='/Users/skowyong/.vim/.git'
+let g:netrw_dirhist_8='/Users/skowyong/.vim'

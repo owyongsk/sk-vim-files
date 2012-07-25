@@ -22,7 +22,6 @@ map <silent> <C-d> :NERDTreeToggle<CR>:set rnu<CR>
 " skowyong's settings
 set ru
 set nu
-colorscheme herald
 set gfn=Consolas
 set history=50
 set cursorline cursorcolumn!
@@ -31,6 +30,10 @@ autocmd BufEnter * set relativenumber
 set ignorecase
 set smartcase
 set tildeop
+
+" Molokai woot!
+set t_Co=256
+colorscheme molokai
 
 " Steve Losh's crazy stuff
 set wrap
