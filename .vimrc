@@ -32,7 +32,7 @@ set smartcase
 set tildeop
 
 " quick macro binding
-nnoremap <leader>' @q
+nnoremap <leader>a @q
 
 " Molokai woot!
 set t_Co=256
