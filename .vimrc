@@ -85,5 +85,5 @@ set smartindent
 " For copying code outside
 set pastetoggle=<C-o>
 
-" SuperTab Settings
+ "SuperTab Settings
 let g:SuperTabDefaultCompletionType = "context"
