@@ -30,6 +30,10 @@ autocmd BufEnter * set relativenumber
 set ignorecase
 set smartcase
 set tildeop
+set backspace=indent,eol,start
+
+" fix quick typo for write
+cabbrev W write
 
 " quick macro binding
 nnoremap <leader>a @q
@@ -82,8 +86,12 @@ autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bu
 set autoindent
 set smartindent
 
-" For copying code outside
+" For pasting outside code with Paste mode
 set pastetoggle=<C-o>
 
- "SuperTab Settings
+" SuperTab Settings
 let g:SuperTabDefaultCompletionType = "context"
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<s-tab>"
