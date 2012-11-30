@@ -21,7 +21,6 @@ map <silent> <C-d> :NERDTreeToggle<CR>:set rnu<CR>
 
 " skowyong's settings
 set ru
-set nu
 set gfn=Consolas
 set history=50
 set cursorline cursorcolumn!
@@ -61,6 +60,9 @@ vnoremap <tab> %
 
 " Bind to open the file
 map <leader>, :!open %<cr>
+
+" Bind to turn off everything for easy copy
+map <leader>j :only<cr> :set norelativenumber<cr>
 
 " Disabling arrow keys to encourage moving in normal mode
 noremap <Up> <nop>
