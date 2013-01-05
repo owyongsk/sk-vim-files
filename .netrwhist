@@ -1,5 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/skowyong/.vim/bundle/ultisnips'
 let g:netrw_dirhist_2='/Users/skowyong/Ruby/Rails/Spartups/.git'
 let g:netrw_dirhist_3='/Users/skowyong/.vim/bundle/ultisnips/UltiSnips'
+let g:netrw_dirhist_4='/Users/skowyong/Dropbox/.dropbox.cache'
+let g:netrw_dirhist_5='/Users/skowyong/Ruby/Rails/labs/start_lab7'
+let g:netrw_dirhist_6='/usr/local/heroku/bin'
+let g:netrw_dirhist_7='/Users/skowyong/COFFEESCRIPT/CHOMPUSJS/src'
+let g:netrw_dirhist_8='/Users/skowyong/.vim'

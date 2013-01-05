@@ -34,9 +34,6 @@ set backspace=indent,eol,start
 " fix quick typo for write
 cabbrev W write
 
-" quick macro binding
-nnoremap <leader>a @q
-
 " Molokai woot!
 set t_Co=256
 colorscheme molokai
@@ -61,8 +58,17 @@ vnoremap <tab> %
 " Bind to open the file
 map <leader>, :!open %<cr>
 
+" quick macro binding
+nnoremap <leader>a @q
+
 " Bind to turn off everything for easy copy
 map <leader>j :only<cr> :set norelativenumber<cr>
+
+" Bind to delete all trailing white space
+map <leader>d :%s/\s\+$//e<cr>
+
+" Binding for quick visual mode fold
+vnoremap <leader>f vzf
 
 " Disabling arrow keys to encourage moving in normal mode
 noremap <Up> <nop>
