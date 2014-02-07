@@ -14,8 +14,8 @@ set ts=2
 set sw=2 " no of spaces for indenting
 
 " Auto launch NERDTree
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+"autocmd VimEnter * NERDTree
+"autocmd VimEnter * wincmd p
 
 " NERDTree Toggle Bind
 map <silent> <C-d> :NERDTreeToggle<CR>:set rnu<CR>
@@ -53,14 +53,14 @@ au Syntax * RainbowParenthesesLoadBraces
 "au Syntax * RainbowParenthesesLoadChevrons
 
 " Bind tag to jump to the beginning or end of tag
-nnoremap <tab> %
-vnoremap <tab> %
+"nnoremap <tab> %
+"vnoremap <tab> %
 
 " Bind to open the file
 map <leader>, :!open %<cr>
 
 " quick macro binding
-nnoremap <leader>a @q
+nnoremap <leader>q @q
 
 " Bind to turn off everything for easy copy
 map <leader>j :only<cr> :set norelativenumber<cr>
@@ -71,15 +71,8 @@ map <leader>d :%s/\s\+$//e<cr>
 " Binding for quick visual mode fold
 vnoremap <leader>f vzf
 
-" Disabling arrow keys to encourage moving in normal mode
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
-inoremap <Up> <nop>
-inoremap <Down> <nop>
-inoremap <Left> <nop>
-inoremap <Right> <nop>
+" Bind Simple Align
+vnoremap <cr> :Tabularize /^\s*\S\+<cr>
 
 " Some sort of search stuff
 set incsearch
@@ -98,9 +91,27 @@ set smartindent
 " For pasting outside code with Paste mode
 set pastetoggle=<C-o>
 
+" NERDCommenter
+let NERDSpaceDelims = 1
+let NERDRemoveExtraSpace = 1
+
+" Slimux
+nmap <Leader>rb :SlimuxShellRun ruby -Itest <C-R>=expand("%:f")<CR><CR>
+nmap <Leader>rl :SlimuxShellLast<CR>
+nmap <Leader>rc :SlimuxShellConfigure<CR>
+
 " SuperTab Settings
 let g:SuperTabDefaultCompletionType = "context"
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<s-tab>"
+
+" Fred and Godwin Settings
+nmap <tab> :bn<CR>
+nmap <S-tab> :bp<CR>
+
+" share settings
+if $TMUX =~ "pair"
+ source /home/share/vimrc.share
+endif

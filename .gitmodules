@@ -64,3 +64,6 @@
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim
+[submodule "bundle/slimux"]
+	path = bundle/slimux
+	url = https://github.com/epeli/slimux
