@@ -21,6 +21,7 @@ set sw=2 " no of spaces for indenting
 map <silent> <C-d> :NERDTreeToggle<CR>:set rnu<CR>
 
 " skowyong's settings
+set nowrap
 set ru
 set gfn=Consolas
 set history=50
@@ -40,7 +41,6 @@ set t_Co=256
 colorscheme molokai
 
 " Steve Losh's crazy stuff
-set wrap
 set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=80
