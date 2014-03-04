@@ -121,10 +121,6 @@ autocmd BufWritePost * call AutoRunSlimux()
 " SuperTab Settings
 let g:SuperTabDefaultCompletionType = "context"
 
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<s-tab>"
-
 " Fred and Godwin Settings
 nmap <tab> :bn<CR>
 nmap <S-tab> :bp<CR>
