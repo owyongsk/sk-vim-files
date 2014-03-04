@@ -18,7 +18,7 @@ set sw=2 " no of spaces for indenting
 "autocmd VimEnter * wincmd p
 
 " NERDTree Toggle Bind
-map <silent> <C-d> :NERDTreeToggle<CR>:set rnu<CR>
+map <leader>e :NERDTreeToggle<CR>:set rnu<CR>
 
 " skowyong's settings
 set nowrap
@@ -27,11 +27,21 @@ set gfn=Consolas
 set history=50
 set cursorline cursorcolumn!
 set fileencodings=utf-8
-autocmd BufEnter * set relativenumber
 set ignorecase
 set smartcase
 set tildeop
 set backspace=indent,eol,start
+
+" Relative Number Magic
+function! NumberToggle()
+  if(&relativenumber ==1)
+    set nornu
+  else
+    set rnu
+  endif
+endfunc
+autocmd BufEnter * set rnu nu
+map <leader>n :call NumberToggle()<cr>
 
 " fix quick typo for write
 cabbrev W write
@@ -63,7 +73,7 @@ map <leader>, :!open %<cr>
 nnoremap <leader>q @q
 
 " Bind to turn off everything for easy copy
-map <leader>j :only<cr> :set norelativenumber<cr>
+map <leader>j :only<cr> :set norelativenumber nonumber<cr>
 
 " Bind to delete all trailing white space
 map <leader>d :%s/\s\+$//e<cr>
