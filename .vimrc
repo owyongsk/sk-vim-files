@@ -75,8 +75,8 @@ nnoremap <leader>q @q
 " Bind to turn off everything for easy copy
 map <leader>j :only<cr> :set norelativenumber nonumber<cr>
 
-" Bind to delete all trailing white space
-map <leader>d :%s/\s\+$//e<cr>
+" Auto delete whitespace on write
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Binding for quick visual mode fold
 vnoremap <leader>f vzf
