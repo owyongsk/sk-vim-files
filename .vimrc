@@ -13,10 +13,6 @@ set expandtab
 set ts=2
 set sw=2 " no of spaces for indenting
 
-" Auto launch NERDTree
-"autocmd VimEnter * NERDTree
-"autocmd VimEnter * wincmd p
-
 " NERDTree Toggle Bind
 map <leader>e :NERDTreeToggle<CR>:set rnu<CR>
 
@@ -31,6 +27,7 @@ set ignorecase
 set smartcase
 set tildeop
 set backspace=indent,eol,start
+set mouse=a
 
 " Relative Number Magic
 function! NumberToggle()
@@ -48,7 +45,7 @@ cabbrev W write
 
 " Molokai woot!
 set t_Co=256
-colorscheme molokai
+colorscheme badwolf
 
 " Steve Losh's crazy stuff
 set textwidth=79
@@ -61,10 +58,6 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 "au Syntax * RainbowParenthesesLoadChevrons
-
-" Bind tag to jump to the beginning or end of tag
-"nnoremap <tab> %
-"vnoremap <tab> %
 
 " Bind to open the file
 map <leader>, :!open %<cr>
@@ -82,7 +75,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 vnoremap <leader>f vzf
 
 " Bind Simple Align
-vnoremap <cr> :Tabularize /^\s*\S\+<cr>
+vmap <Enter> <Plug>(EasyAlign)
 
 " Some sort of search stuff
 set incsearch
@@ -113,9 +106,8 @@ function! AutoRunSlimux()
   endif
 endfunction
 " nmap <Leader>rb :SlimuxShellRun ruby -Itest <C-R>=expand("%:f")<CR><CR>
-" nmap <Leader>rl :SlimuxShellLast<CR>
+nmap <Leader>rl :SlimuxShellLast<CR>
 nmap <Leader>rb :let g:SlimuxConfigured = 1<cr>:set nornu<cr>:SlimuxShellRun ruby -Itest <C-R>=expand("%:f")<CR><CR>
-nmap <Leader>rl :set nornu<cr>:SlimuxShellLast<CR>
 autocmd BufWritePost * call AutoRunSlimux()
 
 " SuperTab Settings
@@ -123,7 +115,7 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " Fred and Godwin Settings
 nmap <tab> :bn<CR>
-nmap <S-tab> :bp<CR>
+nmap <s-tab> :bp<CR>
 
 " share settings
 if $TMUX =~ "pair"
