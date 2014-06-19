@@ -99,16 +99,8 @@ let NERDSpaceDelims = 1
 let NERDRemoveExtraSpace = 1
 
 " Slimux
-let g:SlimuxConfigured = 0
-function! AutoRunSlimux()
-  if g:SlimuxConfigured == 1
-    :SlimuxShellLast
-  endif
-endfunction
-" nmap <Leader>rb :SlimuxShellRun ruby -Itest <C-R>=expand("%:f")<CR><CR>
+nmap <Leader>rb :SlimuxShellRun be rspec <C-R>=expand("%:f")<CR><CR>
 nmap <Leader>rl :SlimuxShellLast<CR>
-nmap <Leader>rb :let g:SlimuxConfigured = 1<cr>:set nornu<cr>:SlimuxShellRun ruby -Itest <C-R>=expand("%:f")<CR><CR>
-autocmd BufWritePost * call AutoRunSlimux()
 
 " SuperTab Settings
 let g:SuperTabDefaultCompletionType = "context"
