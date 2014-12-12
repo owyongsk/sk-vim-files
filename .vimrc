@@ -113,3 +113,6 @@ nmap <s-tab> :bp<CR>
 if $TMUX =~ "pair"
  source /home/share/vimrc.share
 endif
+
+" bind html to handlebars filetype checker
+let g:syntastic_filetype_map = { "html": "handlebars" }
