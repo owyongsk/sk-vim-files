@@ -114,5 +114,6 @@ if $TMUX =~ "pair"
  source /home/share/vimrc.share
 endif
 
-" bind html to handlebars filetype checker
+" Freaking meteor templates highlighting
 let g:syntastic_filetype_map = { "html": "handlebars" }
+au BufRead,BufNewFile *.html set syntax=mustache
