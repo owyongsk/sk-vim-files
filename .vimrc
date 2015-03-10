@@ -99,7 +99,7 @@ let NERDSpaceDelims = 1
 let NERDRemoveExtraSpace = 1
 
 " Slimux
-nmap <Leader>rb :SlimuxShellRun be rspec <C-R>=expand("%:f")<CR><CR>
+nmap <Leader>rb :SlimuxShellRun spring rspec <C-R>=expand("%:f")<CR><CR>
 nmap <Leader>rl :SlimuxShellLast<CR>
 
 " SuperTab Settings
