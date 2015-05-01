@@ -117,3 +117,6 @@ endif
 " Freaking meteor templates highlighting
 let g:syntastic_filetype_map = { "html": "handlebars" }
 au BufRead,BufNewFile *.html set syntax=mustache
+
+" For using undo-ing when using buffers, thanks to Edward Fung
+set hidden
