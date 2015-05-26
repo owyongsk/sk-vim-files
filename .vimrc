@@ -120,3 +120,8 @@ au BufRead,BufNewFile *.html set syntax=mustache
 
 " For using undo-ing when using buffers, thanks to Edward Fung
 set hidden
+
+" Make VIM transparent background work better, from
+" http://stackoverflow.com/questions/21572179/
+hi NonText ctermbg=none
+hi Normal ctermbg=none
