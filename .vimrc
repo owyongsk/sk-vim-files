@@ -125,6 +125,3 @@ set hidden
 " http://stackoverflow.com/questions/21572179/
 hi NonText ctermbg=none
 hi Normal ctermbg=none
-
-" Binding for the eunuch vim
-nnoremap <Leader>rm :Remove!<CR>.
