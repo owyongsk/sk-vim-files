@@ -125,3 +125,7 @@ set hidden
 " http://stackoverflow.com/questions/21572179/
 hi NonText ctermbg=none
 hi Normal ctermbg=none
+
+" Ignore test/ for CtrlP
+set wildignore+=*/test/*
+" let g:ctrlp_custom_ignore = 'test'
