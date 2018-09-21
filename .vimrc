@@ -129,3 +129,11 @@ hi Normal ctermbg=none
 " Ignore test/ for CtrlP
 set wildignore+=*/test/*
 " let g:ctrlp_custom_ignore = 'test'
+
+" Use rg for ctrlp and ack
+let g:ctrlp_user_commanda = 'rg --files %s'
+let g:ctrlp_use_caching = 0
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_switch_buffer = 'et'
+
+let g:ackprg = 'rg --vimgrep --no-heading'
