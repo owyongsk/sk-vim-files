@@ -99,7 +99,7 @@ let NERDSpaceDelims = 1
 let NERDRemoveExtraSpace = 1
 
 " Slimux
-nmap <Leader>rb :SlimuxShellRun be ruby <C-R>=expand("%:f")<CR><CR>
+nmap <Leader>rb :SlimuxShellRun be m <C-R>=expand("%:f")<CR><CR>
 nmap <Leader>rl :SlimuxShellLast<CR>
 
 " SuperTab Settings
@@ -127,11 +127,11 @@ hi NonText ctermbg=none
 hi Normal ctermbg=none
 
 " Ignore test/ for CtrlP
-set wildignore+=*/test/*
+set wildignore+=*/test/*,*/node_modules/*,*/static/*,*.swp
 " let g:ctrlp_custom_ignore = 'test'
 
 " Use rg for ctrlp and ack
-let g:ctrlp_user_commanda = 'rg --files %s'
+let g:ctrlp_user_commanda = 'rg %s --files --color=never --glob ""'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 'et'
