@@ -9,9 +9,7 @@ let g:pathogen_disabled = ['pathogen']
 filetype plugin indent on
 
 " Ruby
-set expandtab
-set ts=2
-set sw=2 " no of spaces for indenting
+set tabstop=2 shiftwidth=2 expandtab " no of spaces for indenting
 
 " NERDTree Toggle Bind
 map <leader>e :NERDTreeToggle<CR>:set rnu<CR>
@@ -101,6 +99,7 @@ let NERDRemoveExtraSpace = 1
 " Slimux
 nmap <Leader>rb :SlimuxShellRun be m <C-R>=expand("%:f")<CR><CR>
 nmap <Leader>rl :SlimuxShellLast<CR>
+nmap <Leader>rc :SlimuxShellRun be rubocop --require rubocop-airbnb -a <C-R>=expand("%:f")<CR><CR>
 
 " SuperTab Settings
 let g:SuperTabDefaultCompletionType = "context"
@@ -119,7 +118,7 @@ let g:syntastic_filetype_map = { "html": "handlebars" }
 au BufRead,BufNewFile *.html set syntax=mustache
 
 " For using undo-ing when using buffers, thanks to Edward Fung
-set hidden
+" set hidden
 
 " Make VIM transparent background work better, from
 " http://stackoverflow.com/questions/21572179/
@@ -127,11 +126,12 @@ hi NonText ctermbg=none
 hi Normal ctermbg=none
 
 " Ignore test/ for CtrlP
-set wildignore+=*/test/*,*/node_modules/*,*/static/*,*.swp
+set wildignore+=*/test/*,*/node_modules/*,*/static/*,*/dist/*,*.swp
 " let g:ctrlp_custom_ignore = 'test'
 
 " Use rg for ctrlp and ack
-let g:ctrlp_user_commanda = 'rg %s --files --color=never --glob ""'
+set grepprg=rg\ --color=never
+let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
 let g:ctrlp_use_caching = 0
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 'et'
