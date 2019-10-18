@@ -88,6 +88,6 @@
 [submodule "bundle/vim-graphql"]
 	path = bundle/vim-graphql
 	url = https://github.com/jparise/vim-graphql.git
-[submodule "/Users/owyongsk/.vim/bundle/colorschemes"]
-	path = /Users/owyongsk/.vim/bundle/colorschemes
+[submodule "bundle/colorschemes"]
+	path = bundle/colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
