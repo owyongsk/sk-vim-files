@@ -63,8 +63,8 @@ map <leader>, :!open %<cr>
 " quick macro binding
 nnoremap <leader>q @q
 
-" Bind to turn off everything for easy copy
-map <leader>j :only<cr> :set norelativenumber nonumber<cr>
+" Pretty print JSON
+map <leader>j :%!jq .<CR>
 
 " Auto delete whitespace on write
 autocmd BufWritePre * :%s/\s\+$//e
@@ -117,10 +117,6 @@ if $TMUX =~ "pair"
  source /home/share/vimrc.share
 endif
 
-" Freaking meteor templates highlighting
-let g:syntastic_filetype_map = { "html": "handlebars" }
-au BufRead,BufNewFile *.html set syntax=mustache
-
 " For using undo-ing when using buffers, thanks to Edward Fung
 " set hidden
 
@@ -141,3 +137,9 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 'et'
 
 let g:ackprg = 'rg --vimgrep --no-heading'
+
+" Ale
+let g:ale_fixers = {'javascript': ['prettier', 'eslint'] }
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_fix_on_save = 1
+let g:ale_lint_on_insert_leave = 0
