@@ -1,1 +1,3 @@
 My .vimrc and my backup for all my delicious vim plugins
+
+Remember to run `git submodule update --init --recursive` on first clone
