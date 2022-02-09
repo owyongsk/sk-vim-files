@@ -102,8 +102,12 @@ nmap <Leader>rl :SlimuxShellLast<CR>
 nmap <Leader>rc :SlimuxShellRun be rubocop --require rubocop-airbnb -a <C-R>=expand("%:f")<CR><CR>
 
 " Copy to clipboard on Mac
-nmap <Leader>rr :%!pbcopy<CR>u
-vmap <Leader>rr :!pbcopy<CR>u
+" nmap <Leader>rr :%!pbcopy<CR>u
+" vmap <Leader>rr :!pbcopy<CR>u
+
+" Copy to clipboard on WSL Windows
+nmap <Leader>rr :%!clip.exe<CR>u
+vmap <Leader>rr :!clip.exe<CR>u
 
 " SuperTab Settings
 let g:SuperTabDefaultCompletionType = "context"
